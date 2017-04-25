@@ -52,7 +52,7 @@ The following commands are runnable on any environments (Windows/Mac/Linux)  :
 
 2. Initiate the authentication to your ACR service by using the following command with your favorite terminal: `sudo docker login --username=<USERNAME> --password=<PASSWORD> <ACR-REGISTRY-NAME>.azurecr.io`. You have to replace the `USERNAME`, `PASSWORD`and `ACR-REGISTRY-NAME` variables with the values provided on your Azure portal
 
-3. It is interesting to know that when you are doing a `docker login` operation, the values are stored locally on the machine under your home folder (`cd ~/.docker` on Mac and Linux or `cd %HOMEPATH%` on Windows). We will compress the contain of this folder by using the `tar czf` command.
+3. It is interesting to know that when you are doing a `docker login` operation, the values are stored locally on the machine under your home folder (`cd ~/.docker` on Mac and Linux or `cd %HOMEPATH%` on Windows). We will compress the contents of this folder by using the `tar czf` command.
 
 4. The final step is to copy the tar file that we just created, inside the file share [that you should have created as prerequisite](container-service-dcos-fileshare.md). You can do it by using the Azure-CLI with the following command `az storage file upload -s <shareName> --account-name <storageAccountName> --account-key <storageAccountKey> -source <pathToTheTarFile>`
 
@@ -156,7 +156,7 @@ Let's say we want to deploy the **simple-web** image, with the **2.1** tag, from
 ```
 
 > [!NOTE] 
-> As you can see, we are using the **uris** option to specify where are stored our credentials.
+> As you can see, we are using the **uris** option to specify where our credentials are stored.
 >
 
 ## Next steps
